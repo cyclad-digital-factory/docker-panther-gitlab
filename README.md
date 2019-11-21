@@ -7,3 +7,4 @@ This docker contains:
 * composer
 * Chromedriver
 * mysql-client
+* unzip

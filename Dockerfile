@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install curl wget php php-cli php7.2 php7.2-common
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
     php composer-setup.php --install-dir=/usr/local/bin --filename=composer && \
     php -r "unlink('composer-setup.php');"
+RUN apt-get update && apt-get install unzip -y -qq
 ENV PANTHER_CHROME_DRIVER_BINARY="/usr/lib/chromium-browser/chromedriver"
 ENV PANTHER_NO_SANDBOX=1
 ENV PANTHER_WEB_SERVER_PORT=9800
